@@ -1,0 +1,163 @@
+@use '../global' as *;
+
+.aboutcontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  @include phone{
+    height: 100vh;
+    align-items: normal;
+  }
+  @include smallphone{
+    height: 110vh;
+  }
+&-main {
+  width: 60%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  justify-content: center;
+@include tablet{
+width: 90%;
+column-gap: 1;
+grid-template-columns: 1fr 1fr;
+}
+@include phone{
+width: 90vw;
+height:auto;
+padding: 1rem 0;
+column-gap: 0;
+grid-template-columns: 1fr;
+}
+&-left {
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  @include phone{
+    display: none;
+  }
+  &-workemoji {
+    position: absolute;
+    z-index: 10;
+    right: 2.2rem;
+    top: 23.8rem;
+    width: 6rem!important;
+  @include tablet{
+    top: 16rem;
+    right:-2rem;
+  }
+  @include phone{
+    top: 21rem;
+    right: 2rem;
+  }
+  }
+  &-mainbg {
+    height: 53vh;
+    width: 25vw;
+    border-radius: 1.7rem;
+    @include tablet{
+      width: 50vw;
+      height: 40vh;
+    }
+    @include phone{
+      width: 90%;
+    }
+  }
+  &-spanleft {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 23rem;
+    top: 22rem;
+  @include tablet{
+    top: 14rem;
+    left: 18rem;
+  }
+  @include phone{
+    top: 19rem;
+    left: 14rem;
+  }
+    img{
+      width: 10rem;
+      animation: logo-rotate 8s linear infinite;
+    }
+  }
+}
+&-right {
+  width: 100%;
+  height: 55vh;
+  max-width: 50rem;
+@include phone{
+height: 100vh;
+}
+h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgb(49, 137, 244);
+  @include phone{
+    text-align: center;
+    font-family: $fontsO;
+  }
+  }
+h4 {
+    font-family:$fontsL;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+  @include phone{
+  
+  }
+  }
+p {
+    font-family:$fontfpr;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+@include tablet{
+  display: none;
+}
+@include phone{
+  display:block;
+  font-family:$fontfpr;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+  }
+}
+&-tabshow{
+  display: none;
+@include tablet{
+  display: block;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end:3;
+  margin-top: -3rem;
+}
+@include phone{
+  display:none;
+}
+p {
+    font-family:$fontflu;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+}
+}
+
+}
+
+
+@keyframes logo-rotate {
+0%{
+  transform: rotate(-360deg);
+}  
+}

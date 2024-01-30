@@ -1,0 +1,410 @@
+@use '../global' as *;
+
+.projectcontainer {
+  width: 100%;
+  height: 230vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color:#e7e6e6;
+@include tablet{
+height: 260vh;
+}
+@include phone{
+height: 440vh;
+}
+&-section {
+    width: 70vw;
+    height: 220vh;
+    display: flex;
+    justify-content: center;
+@include tablet{
+  width: 90vw;
+}
+@include phone{
+  width: 100vw;
+}
+&-contant {
+  width: 55vw;
+  height: 220vh;
+  position: relative;
+  padding: 0rem 0.5rem 0 0.5rem;
+@include tablet{
+  width: 90vw;
+}
+@include phone{
+width: 100vw;
+}
+  h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(34, 123, 255);
+    margin-top: 2rem;
+  }
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+&-box {
+  width: 100%;
+  min-height: 45vh;
+  opacity: 0;
+  transition: all 3s;
+  filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 20px 20px;
+  @include tablet{
+  height: 52vh;
+  align-items: normal;
+  padding-top: 1rem;
+}
+  @include phone{
+  flex-direction: column;
+  height: 100vh;
+  justify-content:flex-start;
+  padding-top: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+&-imgbox{
+  width: 50%;
+  height: 40vh;
+  box-shadow: 10px 10px 10px 7px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 20px 20px;
+  transition: ease-in-out 10s;
+&:hover{
+  background-position: bottom;
+}
+@include tablet{
+  height: 45vh;
+}
+@include phone{
+  width: 90%;
+}
+&-img{
+  background-image: url(../../assets/Tripper-fullscreenshot.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height:auto;
+}
+  }
+&-info {
+  width: 40%;
+  height: 40vh;
+@include tablet{
+  width:45% ;
+}
+@include phone{
+  width: 90%;
+}
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    text-align: center;
+    }
+p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    }
+&-langbtn {
+    width: 100%;
+    height: 3.5vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+@include tablet{
+  gap: 3rem;
+}
+@include phone{
+  gap: 4rem;
+}
+p {
+  text-align: center;
+  width: 6vw;
+  height: 3.5vh;
+  font-size: 1.2rem;
+  font-family: $fontsO;
+  font-weight: 600;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.09);
+  border-radius: 3px 3px 3px 3px;
+@include tablet{
+  width: 14vw;
+}
+@include phone{
+  width: 24vw;
+}
+@include smallphone{
+  width: 30vw;
+}
+  }
+    }
+&-btnbox {
+    width: 100%;
+    height: 3.5vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+   @include smallphone{
+  justify-content: space-evenly;
+  }
+&-btn1 {
+    width: 22%;
+    text-align: center;
+&-p2 {
+  width: 100%;
+  height: 3.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+&:hover {
+    color: rgb(34, 123, 255);
+    }
+&-p1 {
+    width: 100%;
+    height: 3.5vh;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+      }
+    }
+    
+&-btn2 {
+    width: 45%;
+    text-align: center;
+@include tablet{
+  width: 60%;
+}
+@include phone{
+  width: 60%;
+}
+&-p2 {
+  width: 100%;
+  height: 3.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+&:hover {
+    color: rgb(34, 123, 255);
+  }
+&-p1 {
+    width: 60%;
+    height: 3.5vh;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+  @include smallphone{
+    width:70%;
+  }
+    }
+      }
+    }
+    }
+
+    
+  }
+}
+&-box2 {
+  width: 100%;
+  min-height: 45vh;
+  opacity: 0;
+  transition: all 3s;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 20px 20px;
+&:hover{
+  background-position: bottom;
+}
+@include tablet{
+  height: 52vh;
+  align-items: normal;
+  padding-top: 1rem;
+}
+@include phone{
+  flex-direction: column-reverse;
+  height: 100vh;
+  justify-content:flex-start;
+  padding-bottom:8rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+&-imgbox{
+  width: 50%;
+  height: 40vh;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 10px 7px rgba(0, 0, 0, 0.09);
+  border-radius: 20px 20px 20px 20px;
+@include tablet{
+  height: 45vh;
+}
+@include phone{
+  width: 90%;
+}
+  }
+&-info {
+  width: 40%;
+  height: 40vh;
+@include tablet{
+  width:45% ;
+}
+@include phone{
+  width: 90%;
+}
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    text-align: center;
+    }
+p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    }
+&-langbtn {
+    width: 100%;
+    height: 3.5vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+@include tablet{
+  gap: 3rem;
+}
+@include phone{
+  gap: 4rem;
+}
+p {
+  text-align: center;
+  width: 6vw;
+  height: 3.5vh;
+  font-size: 1.2rem;
+  font-family: $fontsO;
+  font-weight: 600;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.09);
+  border-radius: 3px 3px 3px 3px;
+@include tablet{
+  width: 14vw;
+}
+@include phone{
+  width: 24vw;
+}
+@include smallphone{
+  width: 30vw;
+}
+  }
+    }
+&-btnbox {
+    width: 100%;
+    height: 3.5vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  @include smallphone{
+  justify-content: space-evenly;
+  }
+&-btn1 {
+    width: 22%;
+    text-align: center;
+&-p2 {
+  width: 100%;
+  height: 3.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+&:hover {
+    color: rgb(34, 123, 255);
+    }
+&-p1 {
+    width: 100%;
+    height: 3.5vh;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+      }
+    }
+    
+&-btn2 {
+    width: 45%;
+    text-align: center;
+@include tablet{
+  width: 60%;
+}
+@include phone{
+  width: 60%;
+}
+&-p2 {
+  width: 100%;
+  height: 3.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+&:hover {
+    color: rgb(34, 123, 255);
+  }
+&-p1 {
+    width: 60%;
+    height: 3.5vh;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+  @include smallphone{
+    width: 70%;
+  }
+    }
+      }
+    }
+    }
+
+    
+  }
+}
+}
+  }
+}
+
+.img1{
+  background-image: url(../../assets/Tripper-fullscreenshot.png);
+  background-size: cover;
+  background-position: top;
+}
+.img3{
+  background-image: url(../../assets/bodyflex-fullscreenshot.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+}

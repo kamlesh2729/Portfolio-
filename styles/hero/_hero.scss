@@ -1,0 +1,251 @@
+@use '../global' as *;
+
+.contanier{
+width: 100% ;
+height: 100vh;
+background-color:#efededd7;
+}
+.container1{
+  width: 100%;
+  padding: 6rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+@include tablet{
+margin-top:0;
+padding: 0;
+}
+@include phone{
+margin-top:0;
+padding:0;
+}
+&-container2{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 0 0;    
+  gap: 10rem;
+@include tablet{
+width: 90%;
+gap: 4rem;
+}
+@include phone{
+width: 100%;
+height: 78vh;
+flex-direction: column-reverse;
+gap:0;
+margin: 0 0 0 0 ;
+}
+
+&-left{
+  height: 30rem;
+  width: 35rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+@include tablet{
+width: 60%;
+}
+@include phone{
+width: 90%;
+height: 50rem;
+}
+&-h1 {
+  color: #2d2e32;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  @include phone{
+    margin-bottom: 1rem;
+  }
+&-wavehand{
+  width: 2vw;
+  height: 4vh;
+  animation: hello-wobble 8s infinite;
+@include tablet{ width: 2rem;}
+@include phone{
+  width: 2rem;
+}
+      }
+    }
+&-p{
+    color: #555;
+    font-family: Mulish, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+@include phone{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  }
+&-profilelink {
+      width: 100%;
+      height: 4vh;
+      display: flex;
+      align-items: center;
+@include tablet{
+  justify-content:space-evenly;
+}
+@include phone{
+  justify-content: center;
+  gap: 1rem;
+  }
+&-btn{
+      width: 10%;
+      height: 4vh;
+      color: black;
+&:hover{
+      cursor: pointer;
+      color: rgb(34, 123, 255);
+  }
+      }
+    }
+  }  
+&-right{
+    background-image: url(../../Assets/profile.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    height: 30rem;
+    width: 35rem;
+    animation: profile-border-wave 8s ease-in-out infinite;
+@include tablet{
+width: 60%;
+}
+@include phone{
+background-position:center;
+width: 90%;
+height: 60rem;
+}
+  }
+  }
+&-container3{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    color: #767676;
+    font-size: 1.7rem;
+    margin: 2rem 0 0 0;
+@include tablet{
+width:80%;
+}
+@include phone{
+  width: 90%;
+  height: 15vh;
+  padding: 0;
+  margin: 0 ;
+  gap: 1rem;
+  flex-direction: column;
+}
+&-p{
+      border-right: 2px solid rgba(45, 46, 50, 0.5);
+      color: #2d2e32;
+      font-family: Mulish, sans-serif;
+      font-weight: 600;
+      margin-right: 5rem;
+      padding-right: 1rem;
+@include phone{
+padding-right: 0.5rem;
+margin-right: 0.5rem;
+border-right: none;
+}
+    }
+&-ul{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      list-style: none;
+@include tablet{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@include phone{
+  gap: 1rem;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+}
+&-li{
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+        cursor: pointer;
+    &:hover{
+      animation: bounce 0.9s ease-in 0s 1 normal none;
+    }
+&-img{
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+    
+  }
+}
+
+
+@keyframes profile-border-wave {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+@keyframes hello-wobble{
+ 0%,
+ 100%{
+  transform: rotate(0deg);
+  transform-origin: 100% 100%;
+ }
+ 10%{
+  transform: rotate(2deg);
+ }
+ 20%,
+ 40%,
+ 60%{
+  transform: rotate(-4deg);
+ }
+ 30%,
+ 50%,
+ 70%{
+  transform: rotate(4deg);
+ }
+ 80%{
+  transform: rotate(-2deg);
+ }
+ 90%{
+  transform: rotate(2deg);
+ }
+}
+@keyframes bounce {
+  100% {
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translate3d(0,0,0);
+  }
+  43% {
+  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -45px, 0);
+  }
+  70% {
+  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -24px, 0);
+  }
+  90% { 
+    transform: translate3d(0,-12px,0);
+  }
+  } 
